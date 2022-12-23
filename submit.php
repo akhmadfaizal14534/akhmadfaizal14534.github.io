@@ -12,7 +12,7 @@
     <center>
       <h1>TUGAS DASKOM HTML MATRIKULASI</h1>
     </center>
-    <P><?php echo ": ".$_POST['tahun']."<br/>"; ?></P>
+    <P><?php echo ": ".$_POST['pesanphp']."<br/>"; ?></P>
    
 </body>
 
