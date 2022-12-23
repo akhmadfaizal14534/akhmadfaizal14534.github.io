@@ -40,23 +40,31 @@
     </ul>
     <img src="https://cdn-2.tstatic.net/jateng/foto/bank/images/tes-cat-cpns_20170926_085311.jpg"
       alt="Gambar tes CAT CPNS">
+  </div>
+  <form action="submit.php" method="post">
+      <input type="submit" value="Kirim">
+    </form>
+    <?php
+  $to = "akhmadfaizal214@gmail.com";
+  $subject = "Email dari website Anda";
+  $message = "Ini adalah email yang dikirim dari website Anda";
+  $header = "From: noreply@example.com";
  
-      <a href="kalkulator.html"><button class="my-button">kalkulator</button></a>
-  <form action="submit.php" method="post" id="php"><label for="php">pesan buat php</label>
-    <input type="text">
-    
-    <input type="submit" value="Kirim">
-  </form>
-   </div>
+  // kirim email
+  if (mail($to, $subject, $message, $header)) {
+    echo "Email berhasil dikirim";
+  } else {
+    echo "Email gagal dikirim";
+  }
+?>
+
 
   <footer>
     Nama: Akhmad Faizal | NIM: A11.2022.14534 | Kelompok: A11.4114
   </footer>
   <script>
-     window.onload = function() {
-        alert("Isi buku tamu terlebihdahulu !");
-      }
     function kirimPesan() {
+      // ambil nilai/value dari form
       var nama = document.getElementById('nama').value;
 
 
